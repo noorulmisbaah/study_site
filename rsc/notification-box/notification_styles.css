@@ -1,0 +1,68 @@
+/**
+ * Project Name: Custom Notification Box
+ * Author: Noorul Misbah
+ * Version: 1.2.0
+ * Last Updated: 21th November, 2023 
+ * 
+ * Copyright 2023 Noorul Misbah
+ */
+
+@font-face {
+    font-family: 'Segoe UI Semilight';
+    src: url('font/Segoe UI Semilight.ttf');
+}
+
+#page-overlay,
+#notification-box-container {
+    font-family: 'Segoe UI Semilight';
+    display: flex;
+    flex-direction: column;
+    transition: 0.5s ease all;
+    opacity: 0;
+    z-index: -1;
+}
+
+#page-overlay {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    background: #313030BB;
+    justify-content: center;
+}
+
+#notification-box-container {
+    justify-content: space-between;
+    padding: 2rem 9rem;
+    background: #998155b7;
+    width: 100%;
+    min-height: 15rem;
+}
+
+#box-title {
+    font-size: 2.3rem;
+    margin-bottom: 1rem;
+}
+
+#box-content {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+#close-box-button {
+    width: 7rem;
+    height: 2.5rem;
+    background: #473124;
+    color: #E7E7E7;
+    transition: 0.5s ease all;
+    outline: none;
+    font-family: inherit;
+    border: 1px solid #434343;
+    cursor: pointer;
+}
+
+#close-box-button:hover {
+    background: #E7E7E7;
+    color: #473124;
+    border-radius: 5px;
+}

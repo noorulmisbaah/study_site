@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Study Site</title>
+
+        <link rel="stylesheet" href="css/font-families.css">
+        <link rel="stylesheet" href="css/manage-students.css">
+        <link rel="stylesheet" href="notification-box/notification_styles.css">
+
+        <script defer src="notification-box/notification_funcs.js"></script>
+        <script defer src="js/manage-students.js"></script>
+    </head>
+    <body>
+
+    <span class="students-array" hidden> <%= students %> </span>
+    <div class="heading">
+        <img src="imgs/Linear Logo.png" alt="Logo">
+        <p>Manage Students</p>
+    </div>
+    <div class="section">
+        <p class="section-title">All Students</p>
+        <% if (JSON.parse(students).length < 1) { %>
+            <p>There are no students to show.</p>
+        <% } else { %>
+            <select id="students">
+                <% JSON.parse(students).forEach(student => { %>
+                    <option> <%= student.username %> </option>
+                <% }) %>
+            </select>
+            <div class="student-information">
+                <p>Student's Information</p>
+                <div class="information">
+
+                </div>
+            </div>
+        <% } %>
+    </div>
+    <div class="forms">
+        <div class="section">
+            <p class="section-title">Add a New Student</p>
+            <label for="student-name-field">Student's name<sup>*</sup></label><br>
+            <input type="text" id="student-name-field" placeholder="Enter the student's name in here..."><br>
+            <label for="student-password-field">Student's password<sup>*</sup></label><br>
+            <input type="password" id="student-password-field" placeholder="Enter the password for the student..."><br>
+            <label for="student-class-field">Student's class<sup>*</sup></label><br>
+            <select id="student-class-field">
+                <option>JSS 1</option>
+                <option>JSS 2</option>
+                <option>JSS 3</option>
+            </select><br>
+            <button class="confirm-button register">Register Student</button><br>
+        </div>
+        <div class="section">
+            <p class="section-title">Remove a Student</p>
+            <% if (JSON.parse(students).length < 1) { %>
+                <p>There are no students to remove.</p>
+            <% } else { %>
+                <select id="students-for-removal">
+                    <% JSON.parse(students).forEach(student => { %>
+                        <option> <%= student.username %> </option>
+                    <% }) %>
+                </select><br>
+                <button class="confirm-button remove">Remove Student</button>
+            <% } %>
+        </div>
+        <div class="section">
+            <p class="section-title">Update Student Information</p>
+            <% if (JSON.parse(students).length < 1) { %>
+                <p>There are no students in our record.</p>
+            <% } else { %>
+                <label for="update-students-list">Student's name</label><br>
+                <select id="update-students-list">
+                    <% JSON.parse(students).forEach(student => { %>
+                        <option> <%= student.username %> </option>
+                    <% }) %>
+                </select><br>
+                <label for="student-old-password-field-update">Student's old password</label><br>
+                <input type="password" id="student-old-password-field-update" placeholder="Enter the old password for the student..."><br>
+                <label for="student-new-password-field-update">Student's new password</label><br>
+                <input type="password" id="student-new-password-field-update" placeholder="Enter the new password for the student..."><br>
+                <label for="student-class-field-update">Student's new class</label><br>
+                <select id="student-class-field-update">
+                    <option>JSS 1</option>
+                    <option>JSS 2</option>
+                    <option>JSS 3</option>
+                </select><br>
+                <button class="confirm-button update">Update Information</button>
+            <% } %>
+        </div>
+        </div>
+    </div>
+
+<%- include('./includes/footer.ejs') %>

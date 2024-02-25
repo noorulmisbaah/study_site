@@ -1,0 +1,35 @@
+[
+	{
+		"username": "hassan sani",
+		"password": "hassan",
+		"usertype": "administrator"
+	},
+	{
+		"username": "sulaiman umar",
+		"password": "sule",
+		"usertype": "principal"
+	},
+	{
+		"username": "sulaiman hassan",
+		"password": "sule",
+		"usertype": "headteacher"
+	},
+	{
+		"username": "abubakar nasir",
+		"password": "nasir",
+		"usertype": "student",
+		"currentclass": "JSS 3"
+	},
+	{
+		"username": "hassan salisu",
+		"password": "hassan",
+		"usertype": "student",
+		"currentclass": "JSS 1"
+	},
+	{
+		"username": "fatima abdulrazzaq",
+		"password": "12345",
+		"usertype": "student",
+		"currentclass": "JSS 2"
+	}
+]

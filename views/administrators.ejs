@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Study Site</title>
+
+        <link rel="stylesheet" href="css/font-families.css">
+        <link rel="stylesheet" href="css/homepage.css">
+        <link rel="stylesheet" href="css/manage-students.css">
+        <link rel="stylesheet" href="notification-box/notification_styles.css">
+
+        <script defer src="notification-box/notification_funcs.js"></script>
+        <script defer src="js/administrators.js"></script>
+    </head>
+    <body>
+    <div returned-data hidden><%= data %></div>
+    <div class="heading">
+        <img src="imgs/Linear Logo.png" alt="Logo">
+        <p>Welcome, <%= username %></p>
+    </div>
+    <div class="term-selection">
+        <img src="imgs/close.png" draggable="false" alt="Close icon">
+        <p class="select-term-text">Select the Term</p>
+        <p class="selected-subject-text"></p>
+        <button class="term-button">First Term</button><br>
+        <button class="term-button">Second Term</button><br>
+        <button class="term-button">Third Term</button><br>
+    </div>
+    <p class="welcome-text">Welcome to Salsabeel Tahfeez College Study Site!</p>
+    <center>
+        <button class="manage-students-button">Manage Students</button>
+    </center>
+    <div class="page-content">
+        
+    </div>
+    <div class="page-content topics-section">
+        <p class="section-title">No subject is selected.</p>
+        <div class="content">
+            
+        </div>
+    </div>
+    <form action="manage_students" method="POST" hidden>
+        <button type="submit"></button>
+    </form>
+
+<%- include('./includes/footer.ejs') %>

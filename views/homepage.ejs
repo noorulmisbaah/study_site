@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Study Site</title>
+
+        <link rel="stylesheet" href="css/font-families.css">
+        <link rel="stylesheet" href="css/homepage.css">
+        <link rel="stylesheet" href="notification-box/notification_styles.css">
+
+        <script defer src="notification-box/notification_funcs.js"></script>
+        <script defer src="js/homepage.js"></script>
+    </head>
+    <body>
+    <p student-class hidden><%= studentClass %></p>
+    <div class="term-selection">
+        <img src="imgs/close.png" draggable="false" alt="Close icon">
+        <p class="select-term-text">Select the Term</p>
+        <p class="selected-subject-text"></p>
+        <button class="term-button">First Term</button><br>
+        <button class="term-button">Second Term</button><br>
+        <button class="term-button">Third Term</button><br>
+    </div>
+    <div class="heading">
+        <img src="imgs/Linear Logo.png" alt="Logo">
+        <p>Welcome, <%= username %></p>
+    </div>
+    <p class="welcome-text">Welcome to Salsabeel Tahfeez College Study Site!</p>
+    <div class="page-content">
+        <p class="section-title"><%= studentClass %> Subjects</p>
+        <div class="subjects">
+            <% subjects.forEach(subject => { %>
+                <div class="subject-box">
+                    <p><%= subject %></p>
+                </div>
+            <% }) %>
+        </div>
+        <div class="topics-section">
+            <p class="section-title">No subject is selected.</p>
+            <div class="content">
+                
+            </div>
+        </div>
+    </div>
+<%- include('./includes/footer.ejs') %>

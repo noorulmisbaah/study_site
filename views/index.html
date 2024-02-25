@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Sign in</title>
+        <link rel="stylesheet" href="css/font-families.css">
+        <link rel="stylesheet" href="css/siginpage.css">
+        <link rel="stylesheet" href="notification-box/notification_styles.css">
+
+        <script defer src="notification-box/notification_funcs.js"></script>
+        <script defer src="js/signinpage.js"></script>
+    </head>
+    <body>
+        <h1>Welcome to your Study Site!</h1>
+        <div class="fields-container">
+            <p>Sign in</p>
+            <label for="username">Username<sup>*</sup></label><br>
+            <input id="username" type="text" placeholder="Your user name goes here..."><br>
+            <label for="password">Password<sup>*</sup></label><br>
+            <input id="password" type="password" placeholder="Your password goes here..."><br>
+            <button class="sign-button">Sign in</button>
+        </div>
+        <form action="signedin" method="POST" hidden>
+            <input type="text" id="current-user" name="username">
+            <input type="text" id="current-type" name="usertype">
+            <button type="submit"></button>
+        </form>
+        <footer>
+            <p>Powered by Noorul Misbah</p>
+            <p>&copy; 2023 Salsabeel Tahfeez College.</p>
+        </footer>
+    </body>
+</html>
